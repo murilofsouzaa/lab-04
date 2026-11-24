@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Acesso ao sistema - Moeda Estudantil</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; color: #1d2330; margin: 40px; font-size: 13px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 15px; margin: 24px 0 8px; border-bottom: 1px solid #ccc; padding-bottom: 4px; }
+  .sub { color: #5f6b7a; margin: 0 0 20px; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 6px 8px; text-align: left; }
+  th { background: #f0f2f5; }
+  code { font-family: Consolas, monospace; }
+  .link { font-size: 15px; }
+  .nota { color: #5f6b7a; font-size: 11px; margin-top: 24px; }
+</style>
+</head>
+<body>
+  <h1>Sistema de Moeda Estudantil</h1>
+  <p class="sub">Laboratório 04 · Projeto de Software · PUC Minas</p>
+
+  <h2>Link de acesso</h2>
+  <p class="link">Sistema (frontend): <a href="{{FRONT}}">{{FRONT}}</a></p>
+  <p>API (backend): <a href="{{API}}">{{API}}</a></p>
+
+  <h2>Usuários cadastrados</h2>
+  <p>Senha de todos os usuários: <strong><code>123456</code></strong></p>
+  <table>
+    <tr><th>Tipo</th><th>Nome</th><th>Login (e-mail)</th><th>Senha</th><th>Observação</th></tr>
+    <tr><td>Professor</td><td>Ana Souza</td><td><code>ana.souza@pucminas.br</code></td><td><code>123456</code></td><td>PUC Minas · Eng. de Software</td></tr>
+    <tr><td>Professor</td><td>Carlos Lima</td><td><code>carlos.lima@pucminas.br</code></td><td><code>123456</code></td><td>PUC Minas · Ciência da Computação</td></tr>
+    <tr><td>Professor</td><td>Beatriz Rocha</td><td><code>beatriz.rocha@ufmg.br</code></td><td><code>123456</code></td><td>UFMG · Sistemas de Informação</td></tr>
+    <tr><td>Aluno</td><td>João Silva</td><td><code>joao@aluno.com</code></td><td><code>123456</code></td><td>PUC Minas · Eng. de Software</td></tr>
+    <tr><td>Aluno</td><td>Maria Oliveira</td><td><code>maria@aluno.com</code></td><td><code>123456</code></td><td>PUC Minas · Ciência da Computação</td></tr>
+    <tr><td>Empresa parceira</td><td>Cantina Universitária</td><td><code>cantina@empresa.com</code></td><td><code>123456</code></td><td>2 vantagens cadastradas</td></tr>
+    <tr><td>Empresa parceira</td><td>Livraria Saber</td><td><code>livraria@empresa.com</code></td><td><code>123456</code></td><td>1 vantagem cadastrada</td></tr>
+  </table>
+
+  <h2>Roteiro sugerido</h2>
+  <ol>
+    <li>Entrar como <strong>Ana Souza</strong> e enviar moedas para João Silva, informando o motivo.</li>
+    <li>Entrar como <strong>João Silva</strong>, conferir o saldo e resgatar uma vantagem. O cupom aparece na tela e no extrato.</li>
+    <li>Entrar como <strong>Cantina Universitária</strong> e conferir o resgate e o código do cupom na aba "Resgates".</li>
+  </ol>
+
+  <p class="nota">Professores começam com 1.000 moedas (crédito semestral). Alunos e empresas também podem criar contas novas pela tela de login.
+  No plano gratuito do Render, a primeira requisição após inatividade pode levar cerca de 1 minuto.</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: moeda-estudantil-api
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /api/instituicoes
+    envVars:
+      - key: CORS_ORIGINS
+        sync: false # URL do frontend na Vercel, ex.: https://moeda-estudantil.vercel.app
+      - key: DB_HOST
+        fromDatabase: { name: moeda-estudantil-db, property: host }
+      - key: DB_PORT
+        fromDatabase: { name: moeda-estudantil-db, property: port }
+      - key: DB_NAME
+        fromDatabase: { name: moeda-estudantil-db, property: database }
+      - key: DB_USER
+        fromDatabase: { name: moeda-estudantil-db, property: user }
+      - key: DB_PASSWORD
+        fromDatabase: { name: moeda-estudantil-db, property: password }
+
+databases:
+  - name: moeda-estudantil-db
+    plan: free
